@@ -16,6 +16,11 @@ class AppNavigator {
         NavigationRoutes.loaderWidget, ((route) => false));
   }
 
+  static void toAuth() {
+    key.currentState
+        ?.pushNamedAndRemoveUntil(NavigationRoutes.auth, ((route) => false));
+  }
+
   static Route<dynamic>? OnGeneratedRoutes(RouteSettings settings, context) {
     switch (settings.name) {
       case NavigationRoutes.loaderWidget:
